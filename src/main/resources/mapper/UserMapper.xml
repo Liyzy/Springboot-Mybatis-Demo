@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+
+<!-- 在自定义的xml文件中书写sql语句，每个书写sql语句的xml文件必须有一个mapper根标签
+     namespace: 给当前xml文件起别名 -->
+
+<mapper namespace="com.dashang.mapper.UserMapper">
+
+    <!-- mapper中有四个基本标签：select, update, delete, insert
+         每一条语句都有一个id，用于唯一标识一条语句，不可重复 -->
+    <select id="getUser" resultType="UserDomain">
+        SELECT * FROM userinfo
+    </select>
+
+</mapper>
